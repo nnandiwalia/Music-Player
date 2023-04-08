@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <div class="container df">
+        <div id="playList" class="dn" style="width: 50%; "></div>
+        <div id="box" class="df jcsa">
+            <div class="leftside df aic jcc ">
+                <img id="cover" src="" alt="">
+            </div>
+            <div class=" rightside df fdc aic jcc ">
+                <div id="name"></div>
+                <div id="singerName"></div>
+                <div class="playerOptions df jcsa ">
+                    <ion-icon class="cp" name="musical-notes-outline" onclick="showPlayList()"></ion-icon>
+                    <ion-icon id="heart" class="cp" name="heart-outline" onclick="like()"></ion-icon>
+                </div>
+                <div>
+                    <input type="range" name="seek" id="seek" value="0" min="0" max="100"
+                        onchange="changeDuration(this)" onclick="changeDuration(this)">
+                </div>
+                <div class="player df jcsa">
+                    <ion-icon class="cp" name="play-skip-back-outline" onclick="prevSong()"></ion-icon>
+                    <ion-icon id="playBtn" class="cp" name="play-outline" onclick="playPause()"></ion-icon>
+                    <ion-icon class="cp" name="play-skip-forward-outline" onclick="nextSong()"></ion-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
