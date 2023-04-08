@@ -8,32 +8,30 @@
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
     <title>Music Player</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <div class="container df">
-        <div id="playList" class="dn" style="width: 50%; "></div>
-        <div id="box" class="df jcsa">
-            <div class="leftside df aic jcc ">
-                <img id="cover" src="" alt="">
+
+    <div class="flex bg-sky-300">
+        <div class="w-2/5 h-screen flex items-center justify-center">
+            <img id="cover" class="h-60 rounded-xl" src="" alt="">
+        </div>
+        <div class="w-3/5 h-screen flex flex-col items-center justify-center text-white">
+            <div id="name" class="text-2xl"></div>
+            <div id="singerName" class="text-xs"></div>
+            <div class="w-full flex justify-around my-5 text-xl">
+                <ion-icon class="cursor-pointer" name="musical-notes-outline"></ion-icon>
+                <ion-icon class="cursor-pointer" name="heart-outline"></ion-icon>
             </div>
-            <div class=" rightside df fdc aic jcc ">
-                <div id="name"></div>
-                <div id="singerName"></div>
-                <div class="playerOptions df jcsa ">
-                    <ion-icon class="cp" name="musical-notes-outline" onclick="showPlayList()"></ion-icon>
-                    <ion-icon id="heart" class="cp" name="heart-outline" onclick="like()"></ion-icon>
-                </div>
-                <div>
-                    <input type="range" name="seek" id="seek" value="0" min="0" max="100"
-                        onchange="changeDuration(this)" onclick="changeDuration(this)">
-                </div>
-                <div class="player df jcsa">
-                    <ion-icon class="cp" name="play-skip-back-outline" onclick="prevSong()"></ion-icon>
-                    <ion-icon id="playBtn" class="cp" name="play-outline" onclick="playPause()"></ion-icon>
-                    <ion-icon class="cp" name="play-skip-forward-outline" onclick="nextSong()"></ion-icon>
-                </div>
+            <div>
+                <input class="w-96" type="range" name="seek" id="seek" value="0" min="0" max="100"
+                    onchange="changeDuration(this)" onclick="changeDuration(this)">
+            </div>
+            <div class="w-96 flex justify-around my-5 text-2xl">
+                <ion-icon class="cursor-pointer" name="play-skip-back-outline" onclick="prevSong()"></ion-icon>
+                <ion-icon id="playBtn" class="cursor-pointer" name="play-outline" onclick="playPause()"></ion-icon>
+                <ion-icon class="cursor-pointer" name="play-skip-forward-outline" onclick="nextSong()"></ion-icon>
             </div>
         </div>
     </div>
